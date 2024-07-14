@@ -116,6 +116,16 @@ setopt interactivecomments
         export PATH="${GOROOT}/bin:${PATH}"
         export GOPATH="${HOME}/COMPILED/"
     #[/Go]
+    #[Python]
+        #[pyenv]
+        export PYENV_ROOT="$HOME/COMPILED/pyenv"
+        export PATH="$PYENV_ROOT/bin:$PATH"
+        if command -v pyenv 1>/dev/null 2>&1; then
+              eval "$(pyenv init -)"
+        fi
+        export IPDB_CONTEXT_SIZE=20
+        #[/pyenv]
+    #[/Python]
 #[/Programming language / language server specific settings]
 
 #[Binutil aliases]
