@@ -102,32 +102,6 @@ setopt interactivecomments
     zstyle ':completion:*' menu select
 #[/Zstyle settings]
 
-#[Programming language / language server specific settings]
-    #[Rust]
-        if which rustc >/dev/null 2>&1;
-        then
-            export PATH="$HOME/.cargo/bin:$PATH"
-            export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-        fi
-    #[/Rust]
-
-    #[Go]
-        export GOROOT="${HOME}/COMPILED/go1.12.6.linux-amd64/go"
-        export PATH="${GOROOT}/bin:${PATH}"
-        export GOPATH="${HOME}/COMPILED/"
-    #[/Go]
-    #[Python]
-        #[pyenv]
-        export PYENV_ROOT="$HOME/COMPILED/pyenv"
-        export PATH="$PYENV_ROOT/bin:$PATH"
-        if command -v pyenv 1>/dev/null 2>&1; then
-              eval "$(pyenv init -)"
-        fi
-        export IPDB_CONTEXT_SIZE=20
-        #[/pyenv]
-    #[/Python]
-#[/Programming language / language server specific settings]
-
 #[Binutil aliases]
     #[Colorized cat]
     alias ccat="pygmentize -O "style=emacs" -g"
@@ -160,11 +134,6 @@ setopt interactivecomments
         alias t='tig --all'
     #[/Tig]
 #[/Binutil aliases]
-
-#[Sdkman] Management for JVM based SDK versions
-    export SDKMAN_DIR="/home/${USER}/.sdkman"
-    [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
-#[/Sdkman]
 
 # Turn off autocomplete beeps
 unsetopt LIST_BEEP
