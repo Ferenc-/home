@@ -56,11 +56,6 @@ setopt interactivecomments
     autoload -U _homeshick
     compdef _homeshick homeshick
 
-    ## mpv
-    export FPATH=~/COMPILED/mpv/share/zsh/site-functions:$FPATH
-    autoload -U _mpv
-    compdef _mpv mpv
-
     ## Kubernetes kubectl completion only if it is installed and available
     ## https://vishh.github.io/docs/user-guide/kubectl/kubectl_completion/
     which kubectl >/dev/null 2>&1 && source <(kubectl completion zsh)
