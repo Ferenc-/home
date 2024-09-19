@@ -51,10 +51,12 @@ setopt interactivecomments
     autoload -U compinit && compinit
 
     ## homeshick
-    source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-    export FPATH=$HOME/.homesick/repos/homeshick/completions:$FPATH
-    autoload -U _homeshick
-    compdef _homeshick homeshick
+    if [[ -f "$HOME/.homesick/repos/homeshick/homeshick.sh" ]]; then
+      source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+      export FPATH=$HOME/.homesick/repos/homeshick/completions:$FPATH
+      autoload -U _homeshick
+      compdef _homeshick homeshick
+    fi
 
     ## Kubernetes kubectl completion only if it is installed and available
     ## https://vishh.github.io/docs/user-guide/kubectl/kubectl_completion/
