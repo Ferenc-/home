@@ -78,6 +78,9 @@ setopt interactivecomments
     ## Tekton CLI tkn
     which tkn >/dev/null 2>&1 && source <(tkn completion zsh)
 
+    # IBM CLoud CLI
+    export PATH="${HOME}/Downloads/Bluemix_CLI/bin:${PATH}"
+    source ~/Downloads/Bluemix_CLI/autocomplete/zsh_autocomplete
 #[/Extra completions]
 
 #[History settings]
