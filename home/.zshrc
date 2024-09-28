@@ -81,6 +81,9 @@ setopt interactivecomments
     # IBM CLoud CLI
     export PATH="${HOME}/Downloads/Bluemix_CLI/bin:${PATH}"
     source ~/Downloads/Bluemix_CLI/autocomplete/zsh_autocomplete
+
+    # IBM Fyre CLI
+    source <(~/github.ibm.com/Antonio-Gutierrez1/fyre/fyre completion zsh)
 #[/Extra completions]
 
 #[History settings]
