@@ -28,3 +28,5 @@
     cmd = nvim -d $LOCAL $REMOTE
 [http]
     sslVerify = true
+[gpg]
+    program = gpg2
