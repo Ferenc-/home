@@ -1,9 +1,0 @@
-[app] (name=fbrun)
-  [Position]	(WINCENTER)	{0 0}
-  [Layer]	{2}
-[end]
-[app] (name=aterm)
-  [Position]	(UPPERLEFT)	{0 0}
-  [Deco]	{NONE}
-  [Layer]	{10}
-[end]
