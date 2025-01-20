@@ -142,3 +142,4 @@ unsetopt HIST_BEEP
 # Turn off all beeps
 unsetopt BEEP
 
+nman () { man "$@" | nvim -R +':set ft=man' - ; }
