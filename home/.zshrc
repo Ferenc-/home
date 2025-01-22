@@ -143,3 +143,4 @@ unsetopt HIST_BEEP
 unsetopt BEEP
 
 nman () { man "$@" | nvim -R +':set ft=man' - ; }
+nyaml () { nvim -R +':set ft=yaml' - ; }
