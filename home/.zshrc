@@ -66,6 +66,9 @@ setopt interactivecomments
     ## https://github.com/kubernetes/helm/blob/master/docs/helm/helm_completion.md
     which helm >/dev/null 2>&1 && source <(helm completion zsh)
 
+    ## Openshift CLI completion
+    which oc >/dev/null 2>&1 && source <(oc completion zsh)
+
     ## eksctl completion only if it is installed and available
     which eksctl >/dev/null 2>&1 && source <(eksctl completion zsh)
 
